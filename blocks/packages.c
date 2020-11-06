@@ -13,9 +13,3 @@ bool packages(char *str)
 	return pclose(p) != -1;
 }
 
-int main()
-{
-	char buffer[1024];
-	packages(buffer);
-	printf("%s\n", buffer);
-}

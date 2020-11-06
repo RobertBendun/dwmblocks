@@ -1,7 +1,7 @@
 PREFIX ?= /usr/local
 CC ?= gcc
 
-output: dwmblocks.c blocks.def.h blocks.h blocks/*.c
+output: dwmblocks.c blocks.h blocks/*.c
 	${CC} -Wall -Wextra `pkg-config --cflags x11 --libs x11` blocks/*.c dwmblocks.c -o dwmblocks
 
 clean:
