@@ -2,11 +2,18 @@
 
 bool battery(char *str);
 bool date(char *str);
-bool volume(char *str);
 bool disk(char *str);
+bool sunrise(char *str);
+bool uptime(char *str);
+bool volume(char *str);
+
+double Latitude = 52.409538;
+double Longitude = 16.931992;
 
 static const Block blocks[] = {
 	// Icon, Command, Update Interval (seconds), Update Signal
+	{"", &sunrise, 1 * 60 * 60, 0 },
+	{"", &uptime,  120,  0 },
 	{"", &disk,    120,  0 },
 	{"", &volume,    0, 10 },
 	{"", &battery,  10,  0 },
@@ -16,4 +23,3 @@ static const Block blocks[] = {
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
 static char delim[] = " | ";
 static unsigned int delimLen = 5;
-

@@ -1,1 +1,5 @@
 dwmblocks
+_obj
+*.a
+_*.h
+sunrise.h
